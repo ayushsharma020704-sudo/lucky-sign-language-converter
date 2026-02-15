@@ -1,13 +1,15 @@
-import faceHappy from '../assets/image_0.png';
-import faceNeutral from '../assets/image_1.png';
+// Assets utility
+// Mapping user provided images
+import luckyCalm from '../assets/lucky_calm.png';
+import luckyExcited from '../assets/lucky_excited.png';
 
 export const LUCKY_ASSETS = {
     faces: {
-        neutral: faceNeutral,
-        happy: faceHappy,
-        thinking: faceNeutral, // Re-use neutral for now, or add an overlay later
-        confused: faceNeutral, // Could apply CSS filter for confusion
-        hangry: faceNeutral,   // Could apply CSS filter/tint for hangry
+        neutral: luckyCalm,
+        happy: luckyExcited,
+        thinking: luckyCalm,
+        confused: luckyCalm, // Fallback to calm as confused image is missing
+        hangry: luckyCalm,   // Fallback to calm
     },
     sounds: {
         success: '/sounds/success.mp3',
